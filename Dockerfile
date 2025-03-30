@@ -1,16 +1,14 @@
 # --------- Build stage ----------
-    FROM mcr.microsoft.com/dotnet/sdk:9.0-preview AS build
+    FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
     WORKDIR /src
     
-    # Copy everything
+    # Copy solution and project files
     COPY . .
-    
-    # Restore and publish
     RUN dotnet restore ITPlatform.sln
     RUN dotnet publish ITPlatformUMT/ITPlatformUMT.csproj -c Release -o /app/publish
     
     # --------- Runtime stage ----------
-    FROM mcr.microsoft.com/dotnet/aspnet:9.0-preview AS runtime
+    FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
     WORKDIR /app
     COPY --from=build /app/publish ./
     ENTRYPOINT ["dotnet", "ITPlatformUMT.dll"]
