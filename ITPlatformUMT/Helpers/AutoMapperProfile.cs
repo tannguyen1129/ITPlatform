@@ -43,7 +43,8 @@ namespace Helpers
                 .ForMember(dest => dest.SubscriptionList, opt => opt.Ignore());
 
            
-            CreateMap<FreelancerCreateDTO, Freelancer>();
+            CreateMap<FreelancerCreateDTO, Freelancer>()
+                .ForMember(dest => dest.BirthDate, opt => opt.MapFrom(src => DateTime.SpecifyKind(src.BirthDate, DateTimeKind.Utc)));
             CreateMap<FreelancerUpdateDTO, Freelancer>()
                 .ForMember(dest => dest.FreelancerID, opt => opt.Ignore()); 
 
