@@ -115,6 +115,7 @@ var app = builder.Build();
 
 // Bật CORS
 app.UseCors("AllowFrontend");
+app.UseCors("AllowLocalhost3000");
 
 // ===== Configure Middleware =====
 if (app.Environment.IsDevelopment())
