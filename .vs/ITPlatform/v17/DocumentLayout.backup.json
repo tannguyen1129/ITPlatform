@@ -1,0 +1,773 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BBF92E7B-9DA2-4568-8F12-4E1A1C68D7C2}|ITPlatformUMT\\ITPlatformUMT.csproj|c:\\users\\rog\\source\\repos\\itplatform\\itplatformumt\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBF92E7B-9DA2-4568-8F12-4E1A1C68D7C2}|ITPlatformUMT\\ITPlatformUMT.csproj|solutionrelative:itplatformumt\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBF92E7B-9DA2-4568-8F12-4E1A1C68D7C2}|ITPlatformUMT\\ITPlatformUMT.csproj|c:\\users\\rog\\source\\repos\\itplatform\\itplatformumt\\controllers\\projectscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBF92E7B-9DA2-4568-8F12-4E1A1C68D7C2}|ITPlatformUMT\\ITPlatformUMT.csproj|solutionrelative:itplatformumt\\controllers\\projectscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBF92E7B-9DA2-4568-8F12-4E1A1C68D7C2}|ITPlatformUMT\\ITPlatformUMT.csproj|c:\\users\\rog\\source\\repos\\itplatform\\itplatformumt\\controllers\\packagescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBF92E7B-9DA2-4568-8F12-4E1A1C68D7C2}|ITPlatformUMT\\ITPlatformUMT.csproj|solutionrelative:itplatformumt\\controllers\\packagescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBF92E7B-9DA2-4568-8F12-4E1A1C68D7C2}|ITPlatformUMT\\ITPlatformUMT.csproj|c:\\users\\rog\\source\\repos\\itplatform\\itplatformumt\\controllers\\clientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBF92E7B-9DA2-4568-8F12-4E1A1C68D7C2}|ITPlatformUMT\\ITPlatformUMT.csproj|solutionrelative:itplatformumt\\controllers\\clientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BAC7872-60A9-4702-9728-CE2FC83CD358}|BusinessObjects\\BusinessObjects.csproj|c:\\users\\rog\\source\\repos\\itplatform\\businessobjects\\mydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BAC7872-60A9-4702-9728-CE2FC83CD358}|BusinessObjects\\BusinessObjects.csproj|solutionrelative:businessobjects\\mydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBF92E7B-9DA2-4568-8F12-4E1A1C68D7C2}|ITPlatformUMT\\ITPlatformUMT.csproj|c:\\users\\rog\\source\\repos\\itplatform\\itplatformumt\\controllers\\freelancerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBF92E7B-9DA2-4568-8F12-4E1A1C68D7C2}|ITPlatformUMT\\ITPlatformUMT.csproj|solutionrelative:itplatformumt\\controllers\\freelancerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBF92E7B-9DA2-4568-8F12-4E1A1C68D7C2}|ITPlatformUMT\\ITPlatformUMT.csproj|c:\\users\\rog\\source\\repos\\itplatform\\itplatformumt\\controllers\\applicationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBF92E7B-9DA2-4568-8F12-4E1A1C68D7C2}|ITPlatformUMT\\ITPlatformUMT.csproj|solutionrelative:itplatformumt\\controllers\\applicationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBF92E7B-9DA2-4568-8F12-4E1A1C68D7C2}|ITPlatformUMT\\ITPlatformUMT.csproj|c:\\users\\rog\\source\\repos\\itplatform\\itplatformumt\\controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBF92E7B-9DA2-4568-8F12-4E1A1C68D7C2}|ITPlatformUMT\\ITPlatformUMT.csproj|solutionrelative:itplatformumt\\controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BBF92E7B-9DA2-4568-8F12-4E1A1C68D7C2}|ITPlatformUMT\\ITPlatformUMT.csproj|c:\\users\\rog\\source\\repos\\itplatform\\itplatformumt\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{BBF92E7B-9DA2-4568-8F12-4E1A1C68D7C2}|ITPlatformUMT\\ITPlatformUMT.csproj|solutionrelative:itplatformumt\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB7C0D14-A9F1-45E0-83B6-C16C7FCAF39C}|Services\\Services.csproj|c:\\users\\rog\\source\\repos\\itplatform\\services\\subscriptionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB7C0D14-A9F1-45E0-83B6-C16C7FCAF39C}|Services\\Services.csproj|solutionrelative:services\\subscriptionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB7C0D14-A9F1-45E0-83B6-C16C7FCAF39C}|Services\\Services.csproj|c:\\users\\rog\\source\\repos\\itplatform\\services\\submittionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB7C0D14-A9F1-45E0-83B6-C16C7FCAF39C}|Services\\Services.csproj|solutionrelative:services\\submittionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB7C0D14-A9F1-45E0-83B6-C16C7FCAF39C}|Services\\Services.csproj|c:\\users\\rog\\source\\repos\\itplatform\\services\\skillservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB7C0D14-A9F1-45E0-83B6-C16C7FCAF39C}|Services\\Services.csproj|solutionrelative:services\\skillservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB7C0D14-A9F1-45E0-83B6-C16C7FCAF39C}|Services\\Services.csproj|c:\\users\\rog\\source\\repos\\itplatform\\services\\skillrequirementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB7C0D14-A9F1-45E0-83B6-C16C7FCAF39C}|Services\\Services.csproj|solutionrelative:services\\skillrequirementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB7C0D14-A9F1-45E0-83B6-C16C7FCAF39C}|Services\\Services.csproj|c:\\users\\rog\\source\\repos\\itplatform\\services\\skillinprofileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB7C0D14-A9F1-45E0-83B6-C16C7FCAF39C}|Services\\Services.csproj|solutionrelative:services\\skillinprofileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB7C0D14-A9F1-45E0-83B6-C16C7FCAF39C}|Services\\Services.csproj|c:\\users\\rog\\source\\repos\\itplatform\\services\\projectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB7C0D14-A9F1-45E0-83B6-C16C7FCAF39C}|Services\\Services.csproj|solutionrelative:services\\projectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB7C0D14-A9F1-45E0-83B6-C16C7FCAF39C}|Services\\Services.csproj|c:\\users\\rog\\source\\repos\\itplatform\\services\\packageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB7C0D14-A9F1-45E0-83B6-C16C7FCAF39C}|Services\\Services.csproj|solutionrelative:services\\packageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB7C0D14-A9F1-45E0-83B6-C16C7FCAF39C}|Services\\Services.csproj|c:\\users\\rog\\source\\repos\\itplatform\\services\\milestoneservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB7C0D14-A9F1-45E0-83B6-C16C7FCAF39C}|Services\\Services.csproj|solutionrelative:services\\milestoneservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB7C0D14-A9F1-45E0-83B6-C16C7FCAF39C}|Services\\Services.csproj|c:\\users\\rog\\source\\repos\\itplatform\\services\\locationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB7C0D14-A9F1-45E0-83B6-C16C7FCAF39C}|Services\\Services.csproj|solutionrelative:services\\locationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB7C0D14-A9F1-45E0-83B6-C16C7FCAF39C}|Services\\Services.csproj|c:\\users\\rog\\source\\repos\\itplatform\\services\\freelancerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB7C0D14-A9F1-45E0-83B6-C16C7FCAF39C}|Services\\Services.csproj|solutionrelative:services\\freelancerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB7C0D14-A9F1-45E0-83B6-C16C7FCAF39C}|Services\\Services.csproj|c:\\users\\rog\\source\\repos\\itplatform\\services\\expertiseprofileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB7C0D14-A9F1-45E0-83B6-C16C7FCAF39C}|Services\\Services.csproj|solutionrelative:services\\expertiseprofileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB7C0D14-A9F1-45E0-83B6-C16C7FCAF39C}|Services\\Services.csproj|c:\\users\\rog\\source\\repos\\itplatform\\services\\clientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB7C0D14-A9F1-45E0-83B6-C16C7FCAF39C}|Services\\Services.csproj|solutionrelative:services\\clientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB7C0D14-A9F1-45E0-83B6-C16C7FCAF39C}|Services\\Services.csproj|c:\\users\\rog\\source\\repos\\itplatform\\services\\certificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB7C0D14-A9F1-45E0-83B6-C16C7FCAF39C}|Services\\Services.csproj|solutionrelative:services\\certificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB7C0D14-A9F1-45E0-83B6-C16C7FCAF39C}|Services\\Services.csproj|c:\\users\\rog\\source\\repos\\itplatform\\services\\applicationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB7C0D14-A9F1-45E0-83B6-C16C7FCAF39C}|Services\\Services.csproj|solutionrelative:services\\applicationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB7C0D14-A9F1-45E0-83B6-C16C7FCAF39C}|Services\\Services.csproj|c:\\users\\rog\\source\\repos\\itplatform\\services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB7C0D14-A9F1-45E0-83B6-C16C7FCAF39C}|Services\\Services.csproj|solutionrelative:services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1FA5AED-CA31-4F32-BD7A-D20DDD608194}|DataAccessObjects\\DataAccessObjects.csproj|c:\\users\\rog\\source\\repos\\itplatform\\dataaccessobjects\\locationdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1FA5AED-CA31-4F32-BD7A-D20DDD608194}|DataAccessObjects\\DataAccessObjects.csproj|solutionrelative:dataaccessobjects\\locationdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1FA5AED-CA31-4F32-BD7A-D20DDD608194}|DataAccessObjects\\DataAccessObjects.csproj|c:\\users\\rog\\source\\repos\\itplatform\\dataaccessobjects\\freelancerdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1FA5AED-CA31-4F32-BD7A-D20DDD608194}|DataAccessObjects\\DataAccessObjects.csproj|solutionrelative:dataaccessobjects\\freelancerdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1FA5AED-CA31-4F32-BD7A-D20DDD608194}|DataAccessObjects\\DataAccessObjects.csproj|c:\\users\\rog\\source\\repos\\itplatform\\dataaccessobjects\\expertiseprofiledao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1FA5AED-CA31-4F32-BD7A-D20DDD608194}|DataAccessObjects\\DataAccessObjects.csproj|solutionrelative:dataaccessobjects\\expertiseprofiledao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1FA5AED-CA31-4F32-BD7A-D20DDD608194}|DataAccessObjects\\DataAccessObjects.csproj|c:\\users\\rog\\source\\repos\\itplatform\\dataaccessobjects\\clientdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1FA5AED-CA31-4F32-BD7A-D20DDD608194}|DataAccessObjects\\DataAccessObjects.csproj|solutionrelative:dataaccessobjects\\clientdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1FA5AED-CA31-4F32-BD7A-D20DDD608194}|DataAccessObjects\\DataAccessObjects.csproj|c:\\users\\rog\\source\\repos\\itplatform\\dataaccessobjects\\certificationdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1FA5AED-CA31-4F32-BD7A-D20DDD608194}|DataAccessObjects\\DataAccessObjects.csproj|solutionrelative:dataaccessobjects\\certificationdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1FA5AED-CA31-4F32-BD7A-D20DDD608194}|DataAccessObjects\\DataAccessObjects.csproj|c:\\users\\rog\\source\\repos\\itplatform\\dataaccessobjects\\applicationdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1FA5AED-CA31-4F32-BD7A-D20DDD608194}|DataAccessObjects\\DataAccessObjects.csproj|solutionrelative:dataaccessobjects\\applicationdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1FA5AED-CA31-4F32-BD7A-D20DDD608194}|DataAccessObjects\\DataAccessObjects.csproj|c:\\users\\rog\\source\\repos\\itplatform\\dataaccessobjects\\accountdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1FA5AED-CA31-4F32-BD7A-D20DDD608194}|DataAccessObjects\\DataAccessObjects.csproj|solutionrelative:dataaccessobjects\\accountdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BDF305C-2E18-4390-BC41-669EDB5D38AD}|Repositories\\Repositories.csproj|c:\\users\\rog\\source\\repos\\itplatform\\repositories\\expertiseprofilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BDF305C-2E18-4390-BC41-669EDB5D38AD}|Repositories\\Repositories.csproj|solutionrelative:repositories\\expertiseprofilerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BDF305C-2E18-4390-BC41-669EDB5D38AD}|Repositories\\Repositories.csproj|c:\\users\\rog\\source\\repos\\itplatform\\repositories\\certificationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BDF305C-2E18-4390-BC41-669EDB5D38AD}|Repositories\\Repositories.csproj|solutionrelative:repositories\\certificationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BAC7872-60A9-4702-9728-CE2FC83CD358}|BusinessObjects\\BusinessObjects.csproj|c:\\users\\rog\\source\\repos\\itplatform\\businessobjects\\subscription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BAC7872-60A9-4702-9728-CE2FC83CD358}|BusinessObjects\\BusinessObjects.csproj|solutionrelative:businessobjects\\subscription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BAC7872-60A9-4702-9728-CE2FC83CD358}|BusinessObjects\\BusinessObjects.csproj|c:\\users\\rog\\source\\repos\\itplatform\\businessobjects\\submittion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BAC7872-60A9-4702-9728-CE2FC83CD358}|BusinessObjects\\BusinessObjects.csproj|solutionrelative:businessobjects\\submittion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BAC7872-60A9-4702-9728-CE2FC83CD358}|BusinessObjects\\BusinessObjects.csproj|c:\\users\\rog\\source\\repos\\itplatform\\businessobjects\\skillrequirement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BAC7872-60A9-4702-9728-CE2FC83CD358}|BusinessObjects\\BusinessObjects.csproj|solutionrelative:businessobjects\\skillrequirement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BAC7872-60A9-4702-9728-CE2FC83CD358}|BusinessObjects\\BusinessObjects.csproj|c:\\users\\rog\\source\\repos\\itplatform\\businessobjects\\skillinprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BAC7872-60A9-4702-9728-CE2FC83CD358}|BusinessObjects\\BusinessObjects.csproj|solutionrelative:businessobjects\\skillinprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BAC7872-60A9-4702-9728-CE2FC83CD358}|BusinessObjects\\BusinessObjects.csproj|c:\\users\\rog\\source\\repos\\itplatform\\businessobjects\\skill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BAC7872-60A9-4702-9728-CE2FC83CD358}|BusinessObjects\\BusinessObjects.csproj|solutionrelative:businessobjects\\skill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BAC7872-60A9-4702-9728-CE2FC83CD358}|BusinessObjects\\BusinessObjects.csproj|c:\\users\\rog\\source\\repos\\itplatform\\businessobjects\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BAC7872-60A9-4702-9728-CE2FC83CD358}|BusinessObjects\\BusinessObjects.csproj|solutionrelative:businessobjects\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BAC7872-60A9-4702-9728-CE2FC83CD358}|BusinessObjects\\BusinessObjects.csproj|c:\\users\\rog\\source\\repos\\itplatform\\businessobjects\\package.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BAC7872-60A9-4702-9728-CE2FC83CD358}|BusinessObjects\\BusinessObjects.csproj|solutionrelative:businessobjects\\package.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BAC7872-60A9-4702-9728-CE2FC83CD358}|BusinessObjects\\BusinessObjects.csproj|c:\\users\\rog\\source\\repos\\itplatform\\businessobjects\\milestone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BAC7872-60A9-4702-9728-CE2FC83CD358}|BusinessObjects\\BusinessObjects.csproj|solutionrelative:businessobjects\\milestone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BAC7872-60A9-4702-9728-CE2FC83CD358}|BusinessObjects\\BusinessObjects.csproj|c:\\users\\rog\\source\\repos\\itplatform\\businessobjects\\location.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BAC7872-60A9-4702-9728-CE2FC83CD358}|BusinessObjects\\BusinessObjects.csproj|solutionrelative:businessobjects\\location.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BAC7872-60A9-4702-9728-CE2FC83CD358}|BusinessObjects\\BusinessObjects.csproj|c:\\users\\rog\\source\\repos\\itplatform\\businessobjects\\freelancer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BAC7872-60A9-4702-9728-CE2FC83CD358}|BusinessObjects\\BusinessObjects.csproj|solutionrelative:businessobjects\\freelancer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BAC7872-60A9-4702-9728-CE2FC83CD358}|BusinessObjects\\BusinessObjects.csproj|c:\\users\\rog\\source\\repos\\itplatform\\businessobjects\\expertiseprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BAC7872-60A9-4702-9728-CE2FC83CD358}|BusinessObjects\\BusinessObjects.csproj|solutionrelative:businessobjects\\expertiseprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BAC7872-60A9-4702-9728-CE2FC83CD358}|BusinessObjects\\BusinessObjects.csproj|c:\\users\\rog\\source\\repos\\itplatform\\businessobjects\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BAC7872-60A9-4702-9728-CE2FC83CD358}|BusinessObjects\\BusinessObjects.csproj|solutionrelative:businessobjects\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BAC7872-60A9-4702-9728-CE2FC83CD358}|BusinessObjects\\BusinessObjects.csproj|c:\\users\\rog\\source\\repos\\itplatform\\businessobjects\\certification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BAC7872-60A9-4702-9728-CE2FC83CD358}|BusinessObjects\\BusinessObjects.csproj|solutionrelative:businessobjects\\certification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProjectsController.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\ITPlatformUMT\\Controllers\\ProjectsController.cs",
+              "RelativeDocumentMoniker": "ITPlatformUMT\\Controllers\\ProjectsController.cs",
+              "ToolTip": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\ITPlatformUMT\\Controllers\\ProjectsController.cs",
+              "RelativeToolTip": "ITPlatformUMT\\Controllers\\ProjectsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T12:45:58.614Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PackagesController.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\ITPlatformUMT\\Controllers\\PackagesController.cs",
+              "RelativeDocumentMoniker": "ITPlatformUMT\\Controllers\\PackagesController.cs",
+              "ToolTip": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\ITPlatformUMT\\Controllers\\PackagesController.cs",
+              "RelativeToolTip": "ITPlatformUMT\\Controllers\\PackagesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T12:44:28.34Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ClientsController.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\ITPlatformUMT\\Controllers\\ClientsController.cs",
+              "RelativeDocumentMoniker": "ITPlatformUMT\\Controllers\\ClientsController.cs",
+              "ToolTip": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\ITPlatformUMT\\Controllers\\ClientsController.cs",
+              "RelativeToolTip": "ITPlatformUMT\\Controllers\\ClientsController.cs",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAmwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T12:42:48.434Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FreelancersController.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\ITPlatformUMT\\Controllers\\FreelancersController.cs",
+              "RelativeDocumentMoniker": "ITPlatformUMT\\Controllers\\FreelancersController.cs",
+              "ToolTip": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\ITPlatformUMT\\Controllers\\FreelancersController.cs",
+              "RelativeToolTip": "ITPlatformUMT\\Controllers\\FreelancersController.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T12:30:20.233Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ApplicationsController.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\ITPlatformUMT\\Controllers\\ApplicationsController.cs",
+              "RelativeDocumentMoniker": "ITPlatformUMT\\Controllers\\ApplicationsController.cs",
+              "ToolTip": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\ITPlatformUMT\\Controllers\\ApplicationsController.cs",
+              "RelativeToolTip": "ITPlatformUMT\\Controllers\\ApplicationsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T12:27:01.634Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\ITPlatformUMT\\Program.cs",
+              "RelativeDocumentMoniker": "ITPlatformUMT\\Program.cs",
+              "ToolTip": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\ITPlatformUMT\\Program.cs",
+              "RelativeToolTip": "ITPlatformUMT\\Program.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACgAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T12:17:31.562Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AccountsController.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\ITPlatformUMT\\Controllers\\AccountsController.cs",
+              "RelativeDocumentMoniker": "ITPlatformUMT\\Controllers\\AccountsController.cs",
+              "ToolTip": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\ITPlatformUMT\\Controllers\\AccountsController.cs",
+              "RelativeToolTip": "ITPlatformUMT\\Controllers\\AccountsController.cs",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAiwHkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T09:43:42.613Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MyDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\BusinessObjects\\MyDbContext.cs",
+              "RelativeDocumentMoniker": "BusinessObjects\\MyDbContext.cs",
+              "ToolTip": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\BusinessObjects\\MyDbContext.cs",
+              "RelativeToolTip": "BusinessObjects\\MyDbContext.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAowEwAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T08:17:25.268Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\ITPlatformUMT\\appsettings.json",
+              "RelativeDocumentMoniker": "ITPlatformUMT\\appsettings.json",
+              "ToolTip": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\ITPlatformUMT\\appsettings.json",
+              "RelativeToolTip": "ITPlatformUMT\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-27T12:18:46.506Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "SkillService.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\Services\\SkillService.cs",
+              "RelativeDocumentMoniker": "Services\\SkillService.cs",
+              "ToolTip": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\Services\\SkillService.cs",
+              "RelativeToolTip": "Services\\SkillService.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAqwB8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T09:29:10.435Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "SubmittionService.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\Services\\SubmittionService.cs",
+              "RelativeDocumentMoniker": "Services\\SubmittionService.cs",
+              "ToolTip": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\Services\\SubmittionService.cs",
+              "RelativeToolTip": "Services\\SubmittionService.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAqwC4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T09:30:52.608Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "SubscriptionService.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\Services\\SubscriptionService.cs",
+              "RelativeDocumentMoniker": "Services\\SubscriptionService.cs",
+              "ToolTip": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\Services\\SubscriptionService.cs",
+              "RelativeToolTip": "Services\\SubscriptionService.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAwC4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T09:31:01.847Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "SkillRequirementService.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\Services\\SkillRequirementService.cs",
+              "RelativeDocumentMoniker": "Services\\SkillRequirementService.cs",
+              "ToolTip": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\Services\\SkillRequirementService.cs",
+              "RelativeToolTip": "Services\\SkillRequirementService.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAqwCoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T09:30:39.042Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "SkillInProfileService.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\Services\\SkillInProfileService.cs",
+              "RelativeDocumentMoniker": "Services\\SkillInProfileService.cs",
+              "ToolTip": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\Services\\SkillInProfileService.cs",
+              "RelativeToolTip": "Services\\SkillInProfileService.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAwwCoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T09:29:44.792Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ProjectService.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\Services\\ProjectService.cs",
+              "RelativeDocumentMoniker": "Services\\ProjectService.cs",
+              "ToolTip": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\Services\\ProjectService.cs",
+              "RelativeToolTip": "Services\\ProjectService.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAqwCEAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T09:27:13.946Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "PackageService.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\Services\\PackageService.cs",
+              "RelativeDocumentMoniker": "Services\\PackageService.cs",
+              "ToolTip": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\Services\\PackageService.cs",
+              "RelativeToolTip": "Services\\PackageService.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAqwB8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T09:27:04.798Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "MilestoneService.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\Services\\MilestoneService.cs",
+              "RelativeDocumentMoniker": "Services\\MilestoneService.cs",
+              "ToolTip": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\Services\\MilestoneService.cs",
+              "RelativeToolTip": "Services\\MilestoneService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T09:26:52.576Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "LocationService.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\Services\\LocationService.cs",
+              "RelativeDocumentMoniker": "Services\\LocationService.cs",
+              "ToolTip": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\Services\\LocationService.cs",
+              "RelativeToolTip": "Services\\LocationService.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAIwB8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T09:25:54.939Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "FreelancerService.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\Services\\FreelancerService.cs",
+              "RelativeDocumentMoniker": "Services\\FreelancerService.cs",
+              "ToolTip": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\Services\\FreelancerService.cs",
+              "RelativeToolTip": "Services\\FreelancerService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T09:25:44.133Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ExpertiseProfileService.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\Services\\ExpertiseProfileService.cs",
+              "RelativeDocumentMoniker": "Services\\ExpertiseProfileService.cs",
+              "ToolTip": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\Services\\ExpertiseProfileService.cs",
+              "RelativeToolTip": "Services\\ExpertiseProfileService.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAcwCEAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T09:25:14.236Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ClientService.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\Services\\ClientService.cs",
+              "RelativeDocumentMoniker": "Services\\ClientService.cs",
+              "ToolTip": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\Services\\ClientService.cs",
+              "RelativeToolTip": "Services\\ClientService.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAqwCEAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T09:24:49.102Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "CertificationService.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\Services\\CertificationService.cs",
+              "RelativeDocumentMoniker": "Services\\CertificationService.cs",
+              "ToolTip": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\Services\\CertificationService.cs",
+              "RelativeToolTip": "Services\\CertificationService.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAqwB8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T09:24:38.045Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ApplicationService.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\Services\\ApplicationService.cs",
+              "RelativeDocumentMoniker": "Services\\ApplicationService.cs",
+              "ToolTip": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\Services\\ApplicationService.cs",
+              "RelativeToolTip": "Services\\ApplicationService.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAuwCEAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T09:24:27.156Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "AccountService.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\Services\\AccountService.cs",
+              "RelativeDocumentMoniker": "Services\\AccountService.cs",
+              "ToolTip": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\Services\\AccountService.cs",
+              "RelativeToolTip": "Services\\AccountService.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAAB8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T09:31:05.795Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "LocationDAO.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\DataAccessObjects\\LocationDAO.cs",
+              "RelativeDocumentMoniker": "DataAccessObjects\\LocationDAO.cs",
+              "ToolTip": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\DataAccessObjects\\LocationDAO.cs",
+              "RelativeToolTip": "DataAccessObjects\\LocationDAO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T08:07:46.738Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "FreelancerDAO.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\DataAccessObjects\\FreelancerDAO.cs",
+              "RelativeDocumentMoniker": "DataAccessObjects\\FreelancerDAO.cs",
+              "ToolTip": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\DataAccessObjects\\FreelancerDAO.cs",
+              "RelativeToolTip": "DataAccessObjects\\FreelancerDAO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T08:07:37.064Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "ExpertiseProfileDAO.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\DataAccessObjects\\ExpertiseProfileDAO.cs",
+              "RelativeDocumentMoniker": "DataAccessObjects\\ExpertiseProfileDAO.cs",
+              "ToolTip": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\DataAccessObjects\\ExpertiseProfileDAO.cs",
+              "RelativeToolTip": "DataAccessObjects\\ExpertiseProfileDAO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T08:06:57.941Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "ClientDAO.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\DataAccessObjects\\ClientDAO.cs",
+              "RelativeDocumentMoniker": "DataAccessObjects\\ClientDAO.cs",
+              "ToolTip": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\DataAccessObjects\\ClientDAO.cs",
+              "RelativeToolTip": "DataAccessObjects\\ClientDAO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T08:06:24.866Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "CertificationDAO.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\DataAccessObjects\\CertificationDAO.cs",
+              "RelativeDocumentMoniker": "DataAccessObjects\\CertificationDAO.cs",
+              "ToolTip": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\DataAccessObjects\\CertificationDAO.cs",
+              "RelativeToolTip": "DataAccessObjects\\CertificationDAO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T08:06:14.011Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "ApplicationDAO.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\DataAccessObjects\\ApplicationDAO.cs",
+              "RelativeDocumentMoniker": "DataAccessObjects\\ApplicationDAO.cs",
+              "ToolTip": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\DataAccessObjects\\ApplicationDAO.cs",
+              "RelativeToolTip": "DataAccessObjects\\ApplicationDAO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T08:06:02.067Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "AccountDAO.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\DataAccessObjects\\AccountDAO.cs",
+              "RelativeDocumentMoniker": "DataAccessObjects\\AccountDAO.cs",
+              "ToolTip": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\DataAccessObjects\\AccountDAO.cs",
+              "RelativeToolTip": "DataAccessObjects\\AccountDAO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T12:59:57.95Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "ExpertiseProfileRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\Repositories\\ExpertiseProfileRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\ExpertiseProfileRepository.cs",
+              "ToolTip": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\Repositories\\ExpertiseProfileRepository.cs",
+              "RelativeToolTip": "Repositories\\ExpertiseProfileRepository.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAA4wCIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T08:36:56.166Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "CertificationRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\Repositories\\CertificationRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\CertificationRepository.cs",
+              "ToolTip": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\Repositories\\CertificationRepository.cs",
+              "RelativeToolTip": "Repositories\\CertificationRepository.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA4wCAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T08:35:20.921Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Subscription.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\BusinessObjects\\Subscription.cs",
+              "RelativeDocumentMoniker": "BusinessObjects\\Subscription.cs",
+              "ToolTip": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\BusinessObjects\\Subscription.cs",
+              "RelativeToolTip": "BusinessObjects\\Subscription.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T08:18:04.62Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Submittion.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\BusinessObjects\\Submittion.cs",
+              "RelativeDocumentMoniker": "BusinessObjects\\Submittion.cs",
+              "ToolTip": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\BusinessObjects\\Submittion.cs",
+              "RelativeToolTip": "BusinessObjects\\Submittion.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T08:18:00.394Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "SkillRequirement.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\BusinessObjects\\SkillRequirement.cs",
+              "RelativeDocumentMoniker": "BusinessObjects\\SkillRequirement.cs",
+              "ToolTip": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\BusinessObjects\\SkillRequirement.cs",
+              "RelativeToolTip": "BusinessObjects\\SkillRequirement.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T08:17:55.989Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "SkillInProfile.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\BusinessObjects\\SkillInProfile.cs",
+              "RelativeDocumentMoniker": "BusinessObjects\\SkillInProfile.cs",
+              "ToolTip": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\BusinessObjects\\SkillInProfile.cs",
+              "RelativeToolTip": "BusinessObjects\\SkillInProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T08:17:51.452Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "Skill.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\BusinessObjects\\Skill.cs",
+              "RelativeDocumentMoniker": "BusinessObjects\\Skill.cs",
+              "ToolTip": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\BusinessObjects\\Skill.cs",
+              "RelativeToolTip": "BusinessObjects\\Skill.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T08:17:46.944Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "Project.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\BusinessObjects\\Project.cs",
+              "RelativeDocumentMoniker": "BusinessObjects\\Project.cs",
+              "ToolTip": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\BusinessObjects\\Project.cs",
+              "RelativeToolTip": "BusinessObjects\\Project.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T08:17:42.086Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "Package.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\BusinessObjects\\Package.cs",
+              "RelativeDocumentMoniker": "BusinessObjects\\Package.cs",
+              "ToolTip": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\BusinessObjects\\Package.cs",
+              "RelativeToolTip": "BusinessObjects\\Package.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T08:17:33.568Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "Milestone.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\BusinessObjects\\Milestone.cs",
+              "RelativeDocumentMoniker": "BusinessObjects\\Milestone.cs",
+              "ToolTip": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\BusinessObjects\\Milestone.cs",
+              "RelativeToolTip": "BusinessObjects\\Milestone.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T08:17:19.055Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "Location.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\BusinessObjects\\Location.cs",
+              "RelativeDocumentMoniker": "BusinessObjects\\Location.cs",
+              "ToolTip": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\BusinessObjects\\Location.cs",
+              "RelativeToolTip": "BusinessObjects\\Location.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T08:17:14.166Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "Freelancer.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\BusinessObjects\\Freelancer.cs",
+              "RelativeDocumentMoniker": "BusinessObjects\\Freelancer.cs",
+              "ToolTip": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\BusinessObjects\\Freelancer.cs",
+              "RelativeToolTip": "BusinessObjects\\Freelancer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T08:17:05.913Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "ExpertiseProfile.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\BusinessObjects\\ExpertiseProfile.cs",
+              "RelativeDocumentMoniker": "BusinessObjects\\ExpertiseProfile.cs",
+              "ToolTip": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\BusinessObjects\\ExpertiseProfile.cs",
+              "RelativeToolTip": "BusinessObjects\\ExpertiseProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T08:17:01.688Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "Client.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\BusinessObjects\\Client.cs",
+              "RelativeDocumentMoniker": "BusinessObjects\\Client.cs",
+              "ToolTip": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\BusinessObjects\\Client.cs",
+              "RelativeToolTip": "BusinessObjects\\Client.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T08:16:57.206Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "Certification.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\BusinessObjects\\Certification.cs",
+              "RelativeDocumentMoniker": "BusinessObjects\\Certification.cs",
+              "ToolTip": "C:\\Users\\ROG\\source\\repos\\ITPlatform\\BusinessObjects\\Certification.cs",
+              "RelativeToolTip": "BusinessObjects\\Certification.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T08:16:52.513Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
