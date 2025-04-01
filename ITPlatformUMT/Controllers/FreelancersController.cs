@@ -34,17 +34,22 @@ namespace ITPlatformUMT.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] FreelancerCreateDTO dto)
-        {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
+public async Task<IActionResult> Create([FromBody] FreelancerCreateDTO dto)
+{
+    if (!ModelState.IsValid)
+        return BadRequest(ModelState);
 
-            var freelancer = _mapper.Map<Freelancer>(dto);
-            freelancer.FreelancerID = Guid.NewGuid().ToString();
+    var freelancer = _mapper.Map<Freelancer>(dto);
+    freelancer.FreelancerID = Guid.NewGuid().ToString();
 
-            await _service.CreateAsync(freelancer);
-            return Ok(new { message = "Created successfully." });
-        }
+    // ✅ Chuyển BirthDate về UTC
+    if (freelancer.BirthDate.Kind == DateTimeKind.Unspecified)
+        freelancer.BirthDate = DateTime.SpecifyKind(freelancer.BirthDate, DateTimeKind.Utc);
+
+    await _service.CreateAsync(freelancer);
+    return Ok(new { message = "Created successfully." });
+}
+
 
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(string id, [FromBody] FreelancerUpdateDTO dto)

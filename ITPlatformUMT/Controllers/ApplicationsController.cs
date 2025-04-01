@@ -84,25 +84,30 @@ namespace ITPlatformUMT.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(string id, ApplicationUpdateDTO dto)
-        {
-            var existing = await _service.GetByIdAsync(id);
-            if (existing == null) return NotFound();
+public async Task<IActionResult> Update(string id, ApplicationUpdateDTO dto)
+{
+    var existing = await _service.GetByIdAsync(id);
+    if (existing == null) return NotFound();
 
-            _mapper.Map(dto, existing);
-            await _service.UpdateAsync(existing);
+    // Gán thủ công, tránh Map null
+    existing.CV = dto.CV ?? existing.CV;
+    existing.Status = dto.Status ?? existing.Status;
+    existing.FreelancerID = dto.FreelancerID ?? existing.FreelancerID;
+    existing.ProjectID = dto.ProjectID ?? existing.ProjectID;
 
-            var project = await _projectService.GetByIdAsync(existing.ProjectID);
-            var freelancer = await _freelancerService.GetByIdAsync(existing.FreelancerID);
+    var project = await _projectService.GetByIdAsync(existing.ProjectID);
+    var freelancer = await _freelancerService.GetByIdAsync(existing.FreelancerID);
 
-            if (project == null || freelancer == null)
-                return BadRequest("Project hoặc Freelancer không tồn tại.");
+    if (project == null || freelancer == null)
+        return BadRequest("Project hoặc Freelancer không tồn tại.");
 
-            existing.Project = project;
-            existing.Freelancer = freelancer;
+    existing.Project = project;
+    existing.Freelancer = freelancer;
 
-            return Ok(existing);
-        }
+    await _service.UpdateAsync(existing);
+    return Ok(existing);
+}
+
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(string id)

@@ -1,5 +1,6 @@
 C:\Users\LENOVO\projects\final\ITPlatform\ITPlatformUMT\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\LENOVO\projects\final\ITPlatform\ITPlatformUMT\bin\Debug\net8.0\appsettings.json
+C:\Users\LENOVO\projects\final\ITPlatform\ITPlatformUMT\bin\Debug\net8.0\ITPlatformUMT.staticwebassets.runtime.json
 C:\Users\LENOVO\projects\final\ITPlatform\ITPlatformUMT\bin\Debug\net8.0\ITPlatformUMT.staticwebassets.endpoints.json
 C:\Users\LENOVO\projects\final\ITPlatform\ITPlatformUMT\bin\Debug\net8.0\ITPlatformUMT.exe
 C:\Users\LENOVO\projects\final\ITPlatform\ITPlatformUMT\bin\Debug\net8.0\ITPlatformUMT.deps.json

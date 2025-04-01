@@ -1,12 +1,20 @@
 {
   "Version": 1,
-  "Hash": "1VYzOwYfNIfJJeRN91kN5QPZJQduZVKVUaSxgDeWelY=",
+  "Hash": "LHy2QO3dBwP0TmEUFHfqDLo27Ni+/Y5bf38CLNoapz8=",
   "Source": "ITPlatformUMT",
   "BasePath": "_content/ITPlatformUMT",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "ITPlatformUMT\\wwwroot",
+      "Source": "ITPlatformUMT",
+      "ContentRoot": "C:\\Users\\LENOVO\\projects\\final\\ITPlatform\\ITPlatformUMT\\wwwroot\\",
+      "BasePath": "_content/ITPlatformUMT",
+      "Pattern": "**"
+    }
+  ],
   "Assets": [],
   "Endpoints": []
 }

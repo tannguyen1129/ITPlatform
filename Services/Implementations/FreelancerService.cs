@@ -21,8 +21,14 @@ namespace Services.Implementations
         public async Task<Freelancer?> GetByIdAsync(string id) =>
             await _freelancerRepository.GetByIdAsync(id);
 
-        public async Task CreateAsync(Freelancer freelancer) =>
-            await _freelancerRepository.InsertAsync(freelancer);
+        public async Task CreateAsync(Freelancer freelancer)
+{
+    // ✅ Đảm bảo BirthDate là UTC trước khi lưu
+    if (freelancer.BirthDate.Kind == DateTimeKind.Unspecified)
+        freelancer.BirthDate = DateTime.SpecifyKind(freelancer.BirthDate, DateTimeKind.Utc);
+
+    await _freelancerRepository.InsertAsync(freelancer);
+}
 
         public async Task UpdateAsync(Freelancer freelancer) =>
             await _freelancerRepository.UpdateAsync(freelancer);

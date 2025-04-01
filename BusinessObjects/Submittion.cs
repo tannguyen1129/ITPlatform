@@ -6,21 +6,26 @@ namespace BusinessObjects
     public class Submittion
     {
         [Key]
-        public string SubmittionID { get; set; } //submit_id
-        public string Content { get; set; }
-        public string Status { get; set; } //Pending, Accepted, Rejected
+        public string SubmittionID { get; set; } = Guid.NewGuid().ToString();
 
-        // Freelancer
         [Required]
-        public string FreelancerID { get; set; }
-        [ForeignKey("FreelancerID")]
-        public virtual Freelancer Freelancer { get; set; }
+        public required string MilestoneID { get; set; }
 
-        // Milestone
+        [ForeignKey(nameof(MilestoneID))]
+        public Milestone? Milestone { get; set; }
+
         [Required]
-        public string MilestoneID { get; set; }
-        [ForeignKey("MilestoneID")]
-        public virtual Milestone Milestone { get; set; }
+        public required string FreelancerID { get; set; }
 
+        [ForeignKey(nameof(FreelancerID))]
+        public Freelancer? Freelancer { get; set; }
+
+        public string? Description { get; set; }
+
+        public string? FilePath { get; set; }
+
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+
+        public string Status { get; set; } = "Đã nộp";
     }
 }

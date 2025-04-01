@@ -5,66 +5,57 @@ namespace DataAccessObjects
 {
     public class SubmittionDAO
     {
-        private readonly DbContext _context;
+        private readonly MyDbContext _context;
 
-        public SubmittionDAO(DbContext context)
+        public SubmittionDAO(MyDbContext context)
         {
             _context = context;
         }
 
-        public Submittion GetSubmittionById(string submittionId)
+        public async Task<List<Submittion>> GetAllAsync()
         {
-            return _context.Set<Submittion>()
+            return await _context.Submittions
+                .Include(s => s.Milestone)
                 .Include(s => s.Freelancer)
-                .Include(s => s.Milestone)
-                .FirstOrDefault(s => s.SubmittionID == submittionId);
+                .ToListAsync();
         }
 
-        public List<Submittion> GetSubmittionsByFreelancerId(string freelancerId)
+        public async Task<Submittion?> GetByIdAsync(string id)
         {
-            return _context.Set<Submittion>()
-                .Where(s => s.FreelancerID == freelancerId)
+            return await _context.Submittions
                 .Include(s => s.Milestone)
-                .ToList();
-        }
-
-        public List<Submittion> GetSubmittionsByStatus(string status)
-        {
-            return _context.Set<Submittion>()
-                .Where(s => s.Status == status)
                 .Include(s => s.Freelancer)
-                .Include(s => s.Milestone)
-                .ToList();
+                .FirstOrDefaultAsync(s => s.SubmittionID == id);
         }
 
-        public void AddSubmittion(Submittion submittion)
+        public async Task CreateAsync(Submittion submittion)
         {
-            _context.Set<Submittion>().Add(submittion);
-            _context.SaveChanges();
+            await _context.Submittions.AddAsync(submittion);
+            await _context.SaveChangesAsync();
         }
 
-        public void UpdateSubmittion(Submittion submittion)
+        public async Task UpdateAsync(Submittion submittion)
         {
-            _context.Set<Submittion>().Update(submittion);
-            _context.SaveChanges();
+            _context.Submittions.Update(submittion);
+            await _context.SaveChangesAsync();
         }
 
-        public void DeleteSubmittion(string submittionId)
+        public async Task DeleteAsync(string id)
         {
-            var submittion = _context.Set<Submittion>().Find(submittionId);
+            var submittion = await _context.Submittions.FindAsync(id);
             if (submittion != null)
             {
-                _context.Set<Submittion>().Remove(submittion);
-                _context.SaveChanges();
+                _context.Submittions.Remove(submittion);
+                await _context.SaveChangesAsync();
             }
         }
 
-        public List<Submittion> GetSubmittionsByMilestoneId(string milestoneId)
+        public async Task<List<Submittion>> GetByMilestoneIdAsync(string milestoneId)
         {
-            return _context.Set<Submittion>()
+            return await _context.Submittions
                 .Where(s => s.MilestoneID == milestoneId)
                 .Include(s => s.Freelancer)
-                .ToList();
+                .ToListAsync();
         }
     }
 }
