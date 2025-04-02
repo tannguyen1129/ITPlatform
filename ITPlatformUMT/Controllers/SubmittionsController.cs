@@ -94,16 +94,37 @@ namespace ITPlatformUMT.Controllers
         }
 
         // PUT: api/submittions/status/{id}
-        [HttpPut("status/{id}")]
-        public async Task<IActionResult> UpdateStatus(string id, [FromBody] string status)
-        {
-            var existing = await _service.GetByIdAsync(id);
-            if (existing == null) return NotFound();
+        // PUT: api/submittions/upload/{id}
+[HttpPut("upload/{id}")]
+public async Task<IActionResult> UpdateWithFile(string id, [FromForm] SubmittionCreateWithFileDTO dto)
+{
+    var existing = await _service.GetByIdAsync(id);
+    if (existing == null) return NotFound();
 
-            existing.Status = status;
-            await _service.UpdateAsync(existing);
-            return Ok(existing);
-        }
+    // Nếu có file mới thì lưu lại file mới
+    if (dto.File != null)
+    {
+        var folder = Path.Combine(_env.WebRootPath ?? "wwwroot", "submittions");
+        if (!Directory.Exists(folder)) Directory.CreateDirectory(folder);
+
+        var fileName = $"{Guid.NewGuid()}_{dto.File.FileName}";
+        var path = Path.Combine(folder, fileName);
+
+        using var stream = new FileStream(path, FileMode.Create);
+        await dto.File.CopyToAsync(stream);
+
+        existing.FilePath = fileName;
+    }
+
+    // Cập nhật các thông tin khác
+    existing.Description = dto.Description;
+    existing.UpdatedAt = DateTime.UtcNow;
+    existing.Status = "Updated";
+
+    await _service.UpdateAsync(existing);
+    return Ok(existing);
+}
+
 
         // DELETE: api/submittions/{id}
         [HttpDelete("{id}")]
