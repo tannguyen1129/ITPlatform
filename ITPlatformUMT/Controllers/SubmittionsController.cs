@@ -34,6 +34,19 @@ namespace ITPlatformUMT.Controllers
             return data == null ? NotFound("Không tìm thấy bài nộp.") : Ok(data);
         }
 
+        [HttpGet("download/{filename}")]
+public IActionResult DownloadFile(string filename)
+{
+    var folder = Path.Combine(_env.WebRootPath ?? "wwwroot", "submittions");
+    var filePath = Path.Combine(folder, filename);
+
+    if (!System.IO.File.Exists(filePath))
+        return NotFound("Không tìm thấy file.");
+
+    var stream = new FileStream(filePath, FileMode.Open, FileAccess.Read);
+    return File(stream, "application/octet-stream", filename);
+}
+
         // ========================================
         // POST: Create mới (JSON)
         // ========================================

@@ -29,6 +29,16 @@ namespace ITPlatformUMT.Controllers
             return milestone == null ? NotFound() : Ok(milestone);
         }
 
+        // GET: api/milestones/project/{projectID}
+[HttpGet("project/{projectID}")]
+public async Task<IActionResult> GetByProjectID(string projectID)
+{
+    var all = await _service.GetAllAsync();
+    var filtered = all.Where(m => m.ProjectID == projectID).ToList();
+    return Ok(filtered);
+}
+
+
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] MilestoneCreateDTO dto)
         {
