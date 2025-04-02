@@ -109,33 +109,36 @@ namespace ITPlatformUMT.Controllers
         // ========================================
         // PUT: Cập nhật bài nộp có file đính kèm
         // ========================================
-        [HttpPut("upload/{id}")]
-        public async Task<IActionResult> UpdateWithFile(string id, [FromForm] SubmittionCreateWithFileDTO dto)
-        {
-            var existing = await _service.GetByIdAsync(id);
-            if (existing == null) return NotFound("Không tìm thấy bài nộp.");
+[HttpPut("upload/{id}")]
+public async Task<IActionResult> UpdateWithFile(string id, [FromForm] SubmittionCreateWithFileDTO dto)
+{
+    var existing = await _service.GetByIdAsync(id);
+    if (existing == null) return NotFound();
 
-            if (dto.File != null)
-            {
-                var folder = Path.Combine(_env.WebRootPath ?? "wwwroot", "submittions");
-                if (!Directory.Exists(folder)) Directory.CreateDirectory(folder);
+    // Nếu có file mới thì lưu lại file mới
+    if (dto.File != null)
+    {
+        var folder = Path.Combine(_env.WebRootPath ?? "wwwroot", "submittions");
+        if (!Directory.Exists(folder)) Directory.CreateDirectory(folder);
 
-                var fileName = $"{Guid.NewGuid()}_{dto.File.FileName}";
-                var path = Path.Combine(folder, fileName);
+        var fileName = $"{Guid.NewGuid()}_{dto.File.FileName}";
+        var path = Path.Combine(folder, fileName);
 
-                using var stream = new FileStream(path, FileMode.Create);
-                await dto.File.CopyToAsync(stream);
+        using var stream = new FileStream(path, FileMode.Create);
+        await dto.File.CopyToAsync(stream);
 
-                existing.FilePath = fileName;
-            }
+        existing.FilePath = fileName;
+    }
 
-            existing.Description = dto.Description;
-            existing.UpdatedAt = DateTime.UtcNow;
-            existing.Status = "Updated";
+    // Cập nhật thông tin và chuyển lại về trạng thái Pending nếu trước đó là Rejected
+    existing.Description = dto.Description;
+    existing.UpdatedAt = DateTime.UtcNow;
+    existing.Status = existing.Status == "Rejected" ? "Pending" : "Updated";
 
-            await _service.UpdateAsync(existing);
-            return Ok(existing);
-        }
+    await _service.UpdateAsync(existing);
+    return Ok(existing);
+}
+
 
         // ========================================
         // PUT: Cập nhật trạng thái riêng biệt
