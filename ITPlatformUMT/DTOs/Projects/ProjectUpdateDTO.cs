@@ -8,5 +8,8 @@ namespace ITPlatformUMT.DTOs.Projects
         public double BudgetMin { get; set; }
         public double BudgetMax { get; set; }
         public string Status { get; set; } = string.Empty;
+
+        // ✅ Thêm trường IsActive
+        public bool IsActive { get; set; } = true;
     }
 }

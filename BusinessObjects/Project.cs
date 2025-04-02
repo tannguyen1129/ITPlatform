@@ -20,6 +20,8 @@ namespace BusinessObjects
         [Required]
         public string ClientID { get; set; } = default!;
 
+        public bool IsActive { get; set; } = true;
+
         // ✅ Navigation property
         public virtual Client Client { get; set; } = default!;
 
