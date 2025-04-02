@@ -21,56 +21,64 @@ namespace ITPlatformUMT.Controllers
             _env = env;
         }
 
-        // GET: api/submittions
+        // ========================================
+        // GET: All & ByID
+        // ========================================
         [HttpGet]
         public async Task<IActionResult> GetAll() => Ok(await _service.GetAllAsync());
 
-        // GET: api/submittions/{id}
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(string id)
         {
             var data = await _service.GetByIdAsync(id);
-            return data == null ? NotFound() : Ok(data);
+            return data == null ? NotFound("Không tìm thấy bài nộp.") : Ok(data);
         }
 
-        // POST: api/submittions
+        // ========================================
+        // POST: Create mới (JSON)
+        // ========================================
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] SubmittionCreateDTO dto)
         {
+            if (string.IsNullOrEmpty(dto.FreelancerID))
+                return BadRequest("FreelancerID là bắt buộc.");
+
             var submittion = _mapper.Map<Submittion>(dto);
             submittion.SubmittionID = Guid.NewGuid().ToString();
             submittion.CreatedAt = DateTime.UtcNow;
             submittion.Status = "Pending";
 
-            // ⚠️ Đảm bảo đã gán FreelancerID
-            if (string.IsNullOrEmpty(submittion.FreelancerID))
-                return BadRequest("FreelancerID is required.");
-
             await _service.CreateAsync(submittion);
             return Ok(submittion);
         }
 
-        // POST: api/submittions/upload
+        // ========================================
+        // POST: Tạo bài nộp có file
+        // ========================================
         [HttpPost("upload")]
         public async Task<IActionResult> CreateWithFile([FromForm] SubmittionCreateWithFileDTO dto)
         {
+            if (string.IsNullOrEmpty(dto.FreelancerID))
+                return BadRequest("FreelancerID là bắt buộc.");
+
             var fileName = "";
             if (dto.File != null)
             {
                 var folder = Path.Combine(_env.WebRootPath ?? "wwwroot", "submittions");
                 if (!Directory.Exists(folder)) Directory.CreateDirectory(folder);
+
                 fileName = $"{Guid.NewGuid()}_{dto.File.FileName}";
                 var path = Path.Combine(folder, fileName);
+
                 using var stream = new FileStream(path, FileMode.Create);
                 await dto.File.CopyToAsync(stream);
             }
 
-            // ✅ Fix: gán FreelancerID để tránh lỗi CS9035
             var submittion = new Submittion
             {
                 SubmittionID = Guid.NewGuid().ToString(),
                 MilestoneID = dto.MilestoneID,
-                FreelancerID = dto.FreelancerID, // ✅ BẮT BUỘC
+                FreelancerID = dto.FreelancerID,
                 Description = dto.Description,
                 FilePath = fileName,
                 Status = "Pending",
@@ -81,60 +89,93 @@ namespace ITPlatformUMT.Controllers
             return Ok(submittion);
         }
 
-        // PUT: api/submittions/{id}
+        // ========================================
+        // PUT: Cập nhật toàn bộ bài nộp (từ JSON)
+        // ========================================
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(string id, [FromBody] SubmittionUpdateDTO dto)
         {
             var existing = await _service.GetByIdAsync(id);
-            if (existing == null) return NotFound();
+            if (existing == null)
+                return NotFound("Không tìm thấy bài nộp.");
 
             _mapper.Map(dto, existing);
+            existing.UpdatedAt = DateTime.UtcNow;
+
             await _service.UpdateAsync(existing);
             return Ok(existing);
         }
 
-        // PUT: api/submittions/status/{id}
-        // PUT: api/submittions/upload/{id}
-[HttpPut("upload/{id}")]
-public async Task<IActionResult> UpdateWithFile(string id, [FromForm] SubmittionCreateWithFileDTO dto)
-{
-    var existing = await _service.GetByIdAsync(id);
-    if (existing == null) return NotFound();
+        // ========================================
+        // PUT: Cập nhật bài nộp có file đính kèm
+        // ========================================
+        [HttpPut("upload/{id}")]
+        public async Task<IActionResult> UpdateWithFile(string id, [FromForm] SubmittionCreateWithFileDTO dto)
+        {
+            var existing = await _service.GetByIdAsync(id);
+            if (existing == null) return NotFound("Không tìm thấy bài nộp.");
 
-    // Nếu có file mới thì lưu lại file mới
-    if (dto.File != null)
-    {
-        var folder = Path.Combine(_env.WebRootPath ?? "wwwroot", "submittions");
-        if (!Directory.Exists(folder)) Directory.CreateDirectory(folder);
+            if (dto.File != null)
+            {
+                var folder = Path.Combine(_env.WebRootPath ?? "wwwroot", "submittions");
+                if (!Directory.Exists(folder)) Directory.CreateDirectory(folder);
 
-        var fileName = $"{Guid.NewGuid()}_{dto.File.FileName}";
-        var path = Path.Combine(folder, fileName);
+                var fileName = $"{Guid.NewGuid()}_{dto.File.FileName}";
+                var path = Path.Combine(folder, fileName);
 
-        using var stream = new FileStream(path, FileMode.Create);
-        await dto.File.CopyToAsync(stream);
+                using var stream = new FileStream(path, FileMode.Create);
+                await dto.File.CopyToAsync(stream);
 
-        existing.FilePath = fileName;
-    }
+                existing.FilePath = fileName;
+            }
 
-    // Cập nhật các thông tin khác
-    existing.Description = dto.Description;
-    existing.UpdatedAt = DateTime.UtcNow;
-    existing.Status = "Updated";
+            existing.Description = dto.Description;
+            existing.UpdatedAt = DateTime.UtcNow;
+            existing.Status = "Updated";
 
-    await _service.UpdateAsync(existing);
-    return Ok(existing);
-}
+            await _service.UpdateAsync(existing);
+            return Ok(existing);
+        }
 
+        // ========================================
+        // PUT: Cập nhật trạng thái riêng biệt
+        // ========================================
+        [HttpPut("status/{id}")]
+        public async Task<IActionResult> UpdateStatus(string id, [FromBody] SubmittionStatusUpdateDTO dto)
+        {
+            if (string.IsNullOrWhiteSpace(dto.Status))
+                return BadRequest("Trạng thái không được để trống.");
 
-        // DELETE: api/submittions/{id}
+            var allowedStatuses = new[] { "Pending", "Approved", "Rejected", "Updated", "Completed" };
+            if (!allowedStatuses.Contains(dto.Status))
+                return BadRequest($"Trạng thái không hợp lệ. Hợp lệ: {string.Join(", ", allowedStatuses)}");
+
+            var existing = await _service.GetByIdAsync(id);
+            if (existing == null)
+                return NotFound("Không tìm thấy bài nộp.");
+
+            existing.Status = dto.Status;
+            existing.UpdatedAt = DateTime.UtcNow;
+
+            await _service.UpdateAsync(existing);
+            return Ok(new
+            {
+                message = $"Đã cập nhật trạng thái bài nộp thành '{dto.Status}'.",
+                updated = existing
+            });
+        }
+
+        // ========================================
+        // DELETE: Xoá bài nộp
+        // ========================================
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(string id)
         {
             var existing = await _service.GetByIdAsync(id);
-            if (existing == null) return NotFound();
+            if (existing == null) return NotFound("Không tìm thấy bài nộp.");
 
             await _service.DeleteAsync(id);
-            return Ok(new { message = "Submittion deleted successfully." });
+            return Ok(new { message = "Đã xoá bài nộp thành công." });
         }
     }
 }
