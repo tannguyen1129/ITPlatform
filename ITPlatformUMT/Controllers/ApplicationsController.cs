@@ -14,17 +14,20 @@ namespace ITPlatformUMT.Controllers
         private readonly IProjectService _projectService;
         private readonly IFreelancerService _freelancerService;
         private readonly IMapper _mapper;
+        private readonly IWebHostEnvironment _env;
 
         public ApplicationsController(
             IApplicationService service,
             IProjectService projectService,
             IFreelancerService freelancerService,
-            IMapper mapper)
+            IMapper mapper,
+            IWebHostEnvironment env)
         {
             _service = service;
             _projectService = projectService;
             _freelancerService = freelancerService;
             _mapper = mapper;
+            _env = env;
         }
 
         [HttpGet]
@@ -37,11 +40,11 @@ namespace ITPlatformUMT.Controllers
                 var project = await _projectService.GetByIdAsync(app.ProjectID);
                 var freelancer = await _freelancerService.GetByIdAsync(app.FreelancerID);
 
-                if (project == null || freelancer == null)
-                    continue; // hoặc return BadRequest("Invalid project or freelancer.");
-
-                app.Project = project;
-                app.Freelancer = freelancer;
+                if (project != null && freelancer != null)
+                {
+                    app.Project = project;
+                    app.Freelancer = freelancer;
+                }
             }
 
             return Ok(apps);
@@ -54,10 +57,10 @@ namespace ITPlatformUMT.Controllers
             if (app == null) return NotFound();
 
             var project = await _projectService.GetByIdAsync(app.ProjectID);
-            var freelancer = await _freelancerService.GetByIdAsync(app.FreelancerID);
+            if (project == null) return BadRequest("Project không tồn tại.");
 
-            if (project == null || freelancer == null)
-                return BadRequest("Project hoặc Freelancer không tồn tại.");
+            var freelancer = await _freelancerService.GetByIdAsync(app.FreelancerID);
+            if (freelancer == null) return BadRequest("Freelancer không tồn tại.");
 
             app.Project = project;
             app.Freelancer = freelancer;
@@ -66,16 +69,33 @@ namespace ITPlatformUMT.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(ApplicationCreateDTO dto)
+        public async Task<IActionResult> Create([FromForm] ApplicationCreateDTO dto)
         {
             var app = _mapper.Map<Application>(dto);
+
+            if (dto.CVFile != null && dto.CVFile.Length > 0)
+            {
+                var uploadsFolder = Path.Combine(_env.WebRootPath, "cv-uploads");
+                if (!Directory.Exists(uploadsFolder)) Directory.CreateDirectory(uploadsFolder);
+
+                var fileName = Guid.NewGuid().ToString() + Path.GetExtension(dto.CVFile.FileName);
+                var filePath = Path.Combine(uploadsFolder, fileName);
+
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    await dto.CVFile.CopyToAsync(stream);
+                }
+
+                app.CV = fileName;
+            }
+
             await _service.CreateAsync(app);
 
             var project = await _projectService.GetByIdAsync(app.ProjectID);
-            var freelancer = await _freelancerService.GetByIdAsync(app.FreelancerID);
+            if (project == null) return BadRequest("Project không tồn tại.");
 
-            if (project == null || freelancer == null)
-                return BadRequest("Project hoặc Freelancer không tồn tại.");
+            var freelancer = await _freelancerService.GetByIdAsync(app.FreelancerID);
+            if (freelancer == null) return BadRequest("Freelancer không tồn tại.");
 
             app.Project = project;
             app.Freelancer = freelancer;
@@ -84,30 +104,43 @@ namespace ITPlatformUMT.Controllers
         }
 
         [HttpPut("{id}")]
-public async Task<IActionResult> Update(string id, ApplicationUpdateDTO dto)
-{
-    var existing = await _service.GetByIdAsync(id);
-    if (existing == null) return NotFound();
+        public async Task<IActionResult> Update(string id, [FromForm] ApplicationUpdateDTO dto)
+        {
+            var existing = await _service.GetByIdAsync(id);
+            if (existing == null) return NotFound();
 
-    // Gán thủ công, tránh Map null
-    existing.CV = dto.CV ?? existing.CV;
-    existing.Status = dto.Status ?? existing.Status;
-    existing.FreelancerID = dto.FreelancerID ?? existing.FreelancerID;
-    existing.ProjectID = dto.ProjectID ?? existing.ProjectID;
+            existing.Status = dto.Status ?? existing.Status;
+            existing.FreelancerID = dto.FreelancerID ?? existing.FreelancerID;
+            existing.ProjectID = dto.ProjectID ?? existing.ProjectID;
 
-    var project = await _projectService.GetByIdAsync(existing.ProjectID);
-    var freelancer = await _freelancerService.GetByIdAsync(existing.FreelancerID);
+            if (dto.CVFile != null && dto.CVFile.Length > 0)
+            {
+                var uploadsFolder = Path.Combine(_env.WebRootPath, "cv-uploads");
+                if (!Directory.Exists(uploadsFolder)) Directory.CreateDirectory(uploadsFolder);
 
-    if (project == null || freelancer == null)
-        return BadRequest("Project hoặc Freelancer không tồn tại.");
+                var fileName = Guid.NewGuid().ToString() + Path.GetExtension(dto.CVFile.FileName);
+                var filePath = Path.Combine(uploadsFolder, fileName);
 
-    existing.Project = project;
-    existing.Freelancer = freelancer;
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    await dto.CVFile.CopyToAsync(stream);
+                }
 
-    await _service.UpdateAsync(existing);
-    return Ok(existing);
-}
+                existing.CV = fileName;
+            }
 
+            var project = await _projectService.GetByIdAsync(existing.ProjectID);
+            if (project == null) return BadRequest("Project không tồn tại.");
+
+            var freelancer = await _freelancerService.GetByIdAsync(existing.FreelancerID);
+            if (freelancer == null) return BadRequest("Freelancer không tồn tại.");
+
+            existing.Project = project;
+            existing.Freelancer = freelancer;
+
+            await _service.UpdateAsync(existing);
+            return Ok(existing);
+        }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(string id)
