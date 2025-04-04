@@ -3,6 +3,7 @@ using BusinessObjects;
 using ITPlatformUMT.DTOs.Applications;
 using Microsoft.AspNetCore.Mvc;
 using Services.Interfaces;
+using Microsoft.AspNetCore.Hosting;
 
 namespace ITPlatformUMT.Controllers
 {
@@ -34,19 +35,14 @@ namespace ITPlatformUMT.Controllers
         public async Task<IActionResult> GetAll()
         {
             var apps = await _service.GetAllAsync();
-
             foreach (var app in apps)
             {
                 var project = await _projectService.GetByIdAsync(app.ProjectID);
                 var freelancer = await _freelancerService.GetByIdAsync(app.FreelancerID);
 
-                if (project != null && freelancer != null)
-                {
-                    app.Project = project;
-                    app.Freelancer = freelancer;
-                }
+                if (project != null) app.Project = project;
+                if (freelancer != null) app.Freelancer = freelancer;
             }
-
             return Ok(apps);
         }
 
@@ -57,13 +53,10 @@ namespace ITPlatformUMT.Controllers
             if (app == null) return NotFound();
 
             var project = await _projectService.GetByIdAsync(app.ProjectID);
-            if (project == null) return BadRequest("Project không tồn tại.");
-
             var freelancer = await _freelancerService.GetByIdAsync(app.FreelancerID);
-            if (freelancer == null) return BadRequest("Freelancer không tồn tại.");
 
-            app.Project = project;
-            app.Freelancer = freelancer;
+            if (project != null) app.Project = project;
+            if (freelancer != null) app.Freelancer = freelancer;
 
             return Ok(app);
         }
@@ -75,7 +68,8 @@ namespace ITPlatformUMT.Controllers
 
             if (dto.CVFile != null && dto.CVFile.Length > 0)
             {
-                var uploadsFolder = Path.Combine(_env.WebRootPath, "cv-uploads");
+                var webRootPath = _env.WebRootPath ?? Path.Combine(Directory.GetCurrentDirectory(), "wwwroot");
+                var uploadsFolder = Path.Combine(webRootPath, "cv-uploads");
                 if (!Directory.Exists(uploadsFolder)) Directory.CreateDirectory(uploadsFolder);
 
                 var fileName = Guid.NewGuid().ToString() + Path.GetExtension(dto.CVFile.FileName);
@@ -92,13 +86,10 @@ namespace ITPlatformUMT.Controllers
             await _service.CreateAsync(app);
 
             var project = await _projectService.GetByIdAsync(app.ProjectID);
-            if (project == null) return BadRequest("Project không tồn tại.");
-
             var freelancer = await _freelancerService.GetByIdAsync(app.FreelancerID);
-            if (freelancer == null) return BadRequest("Freelancer không tồn tại.");
 
-            app.Project = project;
-            app.Freelancer = freelancer;
+            if (project != null) app.Project = project;
+            if (freelancer != null) app.Freelancer = freelancer;
 
             return Ok(app);
         }
@@ -109,13 +100,15 @@ namespace ITPlatformUMT.Controllers
             var existing = await _service.GetByIdAsync(id);
             if (existing == null) return NotFound();
 
+            existing.CoverLetter = dto.CoverLetter ?? existing.CoverLetter;
             existing.Status = dto.Status ?? existing.Status;
             existing.FreelancerID = dto.FreelancerID ?? existing.FreelancerID;
             existing.ProjectID = dto.ProjectID ?? existing.ProjectID;
 
             if (dto.CVFile != null && dto.CVFile.Length > 0)
             {
-                var uploadsFolder = Path.Combine(_env.WebRootPath, "cv-uploads");
+                var webRootPath = _env.WebRootPath ?? Path.Combine(Directory.GetCurrentDirectory(), "wwwroot");
+                var uploadsFolder = Path.Combine(webRootPath, "cv-uploads");
                 if (!Directory.Exists(uploadsFolder)) Directory.CreateDirectory(uploadsFolder);
 
                 var fileName = Guid.NewGuid().ToString() + Path.GetExtension(dto.CVFile.FileName);
@@ -130,13 +123,10 @@ namespace ITPlatformUMT.Controllers
             }
 
             var project = await _projectService.GetByIdAsync(existing.ProjectID);
-            if (project == null) return BadRequest("Project không tồn tại.");
-
             var freelancer = await _freelancerService.GetByIdAsync(existing.FreelancerID);
-            if (freelancer == null) return BadRequest("Freelancer không tồn tại.");
 
-            existing.Project = project;
-            existing.Freelancer = freelancer;
+            if (project != null) existing.Project = project;
+            if (freelancer != null) existing.Freelancer = freelancer;
 
             await _service.UpdateAsync(existing);
             return Ok(existing);
