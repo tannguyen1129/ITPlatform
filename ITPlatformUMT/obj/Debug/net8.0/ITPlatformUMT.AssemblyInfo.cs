@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ITPlatformUMT")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ba9a1180072a06e2b898771da01f96ec9351b38a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b05786f1eee8564ba427695ec90ee5b186e68719")]
 [assembly: System.Reflection.AssemblyProductAttribute("ITPlatformUMT")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ITPlatformUMT")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

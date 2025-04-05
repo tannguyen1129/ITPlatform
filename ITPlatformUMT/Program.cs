@@ -9,6 +9,9 @@ using Services.Implementations;
 using Repositories.Interfaces;
 using Repositories.Implementations;
 using Helpers;
+using System.Net.WebSockets;
+using Microsoft.AspNetCore.WebSockets;
+using ITPlatformUMT.WebSockets;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -124,6 +127,30 @@ var app = builder.Build();
 // Bật CORS
 app.UseCors("AllowFrontend");
 app.UseCors("AllowLocalhost3000");
+
+
+app.UseWebSockets();
+
+app.Use(async (context, next) =>
+{
+    if (context.Request.Path.StartsWithSegments("/ws"))
+    {
+        if (context.WebSockets.IsWebSocketRequest)
+        {
+            var socket = await context.WebSockets.AcceptWebSocketAsync();
+            await WebSocketHandler.Handle(context, socket);
+        }
+        else
+        {
+            context.Response.StatusCode = 400;
+        }
+    }
+    else
+    {
+        await next();
+    }
+});
+
 
 // ===== Configure Middleware =====
 if (app.Environment.IsDevelopment())
