@@ -20,31 +20,42 @@ namespace BusinessObjects
         public DbSet<Submittion> Submittions { get; set; }
         public DbSet<Subscription> Subscriptions { get; set; }
 
+        // Thêm Chat & Message
+        public DbSet<Chat> Chats { get; set; }
+        public DbSet<Message> Messages { get; set; }
+
         public MyDbContext(DbContextOptions<MyDbContext> options) : base(options)
         {
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
-{
-    base.OnModelCreating(modelBuilder);
+        {
+            base.OnModelCreating(modelBuilder);
 
-    modelBuilder.Entity<Application>()
-        .HasOne(a => a.Freelancer)
-        .WithMany(f => f.ApplicationList) 
-        .HasForeignKey(a => a.FreelancerID)
-        .OnDelete(DeleteBehavior.Restrict);
+            modelBuilder.Entity<Application>()
+                .HasOne(a => a.Freelancer)
+                .WithMany(f => f.ApplicationList) 
+                .HasForeignKey(a => a.FreelancerID)
+                .OnDelete(DeleteBehavior.Restrict);
 
-    modelBuilder.Entity<Application>()
-        .HasOne(a => a.Project)
-        .WithMany(p => p.ApplicationList)
-        .HasForeignKey(a => a.ProjectID)
-        .OnDelete(DeleteBehavior.Restrict);
+            modelBuilder.Entity<Application>()
+                .HasOne(a => a.Project)
+                .WithMany(p => p.ApplicationList)
+                .HasForeignKey(a => a.ProjectID)
+                .OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<Project>()
                 .HasOne(p => p.Client)
                 .WithMany()
                 .HasForeignKey(p => p.ClientID)
                 .OnDelete(DeleteBehavior.Restrict);
+
+            // Chat -> Message
+            modelBuilder.Entity<Message>()
+                .HasOne(m => m.Chat)
+                .WithMany(c => c.Messages)
+                .HasForeignKey(m => m.ChatID)
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

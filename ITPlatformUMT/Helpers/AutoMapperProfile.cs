@@ -15,6 +15,8 @@ using ITPlatformUMT.DTOs.SkillRequirements;
 using ITPlatformUMT.DTOs.SkillInProfiles;
 using ITPlatformUMT.DTOs.Packages;
 using ITPlatformUMT.DTOs.Accounts;
+using ITPlatformUMT.DTOs.Chat;
+using ITPlatformUMT.DTOs.Messages;
 
 
 
@@ -122,6 +124,16 @@ namespace Helpers
 
             CreateMap<PackageCreateDTO, Package>();
             CreateMap<PackageUpdateDTO, Package>();
+
+             // Chat Mapping
+            CreateMap<Chat, ChatResponseDTO>();
+            CreateMap<ChatCreateDTO, Chat>();
+
+        // Message Mapping
+            CreateMap<Message, MessageResponseDTO>();
+            CreateMap<MessageCreateDTO, Message>();
+            CreateMap<MessageUpdateDTO, Message>()
+                .ForAllMembers(opts => opts.Condition((src, dest, srcMember) => srcMember != null));
 
 
         }

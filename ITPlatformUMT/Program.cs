@@ -98,6 +98,14 @@ builder.Services.AddScoped<ISkillInProfileService, SkillInProfileService>();
 builder.Services.AddScoped<IPackageRepository, PackageRepository>();
 builder.Services.AddScoped<IPackageService, PackageService>();
 
+// Message
+builder.Services.AddScoped<IMessageRepository, MessageRepository>();
+builder.Services.AddScoped<IMessageService, MessageService>();
+
+// Chat
+builder.Services.AddScoped<IChatRepository, ChatRepository>();
+builder.Services.AddScoped<IChatService, ChatService>();
+
 // ===== Add Controllers and JSON Options =====
 builder.Services.AddControllers().AddJsonOptions(x =>
 {

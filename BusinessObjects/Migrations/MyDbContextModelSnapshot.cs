@@ -107,6 +107,29 @@ namespace BusinessObjects.Migrations
                     b.ToTable("Certifications");
                 });
 
+            modelBuilder.Entity("BusinessObjects.Chat", b =>
+                {
+                    b.Property<Guid>("ChatID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("ClientID")
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<Guid>("FreelancerID")
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime>("LastMessageAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.HasKey("ChatID");
+
+                    b.ToTable("Chats");
+                });
+
             modelBuilder.Entity("BusinessObjects.Client", b =>
                 {
                     b.Property<string>("ClientID")
@@ -236,6 +259,40 @@ namespace BusinessObjects.Migrations
                     b.HasIndex("ClientID");
 
                     b.ToTable("Locations");
+                });
+
+            modelBuilder.Entity("BusinessObjects.Message", b =>
+                {
+                    b.Property<Guid>("MessageID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("ChatID")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<bool>("IsRead")
+                        .HasColumnType("boolean");
+
+                    b.Property<Guid>("SenderID")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("SenderRole")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("character varying(20)");
+
+                    b.Property<DateTime>("SentAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.HasKey("MessageID");
+
+                    b.HasIndex("ChatID");
+
+                    b.ToTable("Messages");
                 });
 
             modelBuilder.Entity("BusinessObjects.Milestone", b =>
@@ -533,6 +590,17 @@ namespace BusinessObjects.Migrations
                     b.Navigation("Client");
                 });
 
+            modelBuilder.Entity("BusinessObjects.Message", b =>
+                {
+                    b.HasOne("BusinessObjects.Chat", "Chat")
+                        .WithMany("Messages")
+                        .HasForeignKey("ChatID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Chat");
+                });
+
             modelBuilder.Entity("BusinessObjects.Milestone", b =>
                 {
                     b.HasOne("BusinessObjects.Project", "Project")
@@ -633,6 +701,11 @@ namespace BusinessObjects.Migrations
                     b.Navigation("Client");
 
                     b.Navigation("Freelancer");
+                });
+
+            modelBuilder.Entity("BusinessObjects.Chat", b =>
+                {
+                    b.Navigation("Messages");
                 });
 
             modelBuilder.Entity("BusinessObjects.Client", b =>
